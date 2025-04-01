@@ -24,7 +24,7 @@ public class Income {
     private String category;
     private String description;
 
-    public IncomeDTO gIncomeDTO() {
+    public IncomeDTO getIncomeDTO() {
         IncomeDTO incomeDTO = new IncomeDTO();
         incomeDTO.setId(this.id);
         incomeDTO.setTitle(this.title);
