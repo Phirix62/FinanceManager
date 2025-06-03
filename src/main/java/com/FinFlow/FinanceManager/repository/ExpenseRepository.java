@@ -14,11 +14,15 @@ import com.FinFlow.FinanceManager.entity.Expense;
 @Repository
 public interface ExpenseRepository extends JpaRepository<Expense, Long> {
 
-    List<Expense> findByDateBetween(LocalDate startDate, LocalDate endDate);
+    List<Expense> findByUserIdAndDateBetween(Long userId, LocalDate startDate, LocalDate endDate);
 
-    @Query("SELECT SUM(e.amount) FROM Expense e")
-    Double sumAllAmounts();
+    @Query("SELECT SUM(e.amount) FROM Expense e WHERE e.user.id = :userId")
+    Double sumAllAmountsByUserId(Long userId);
 
-    Optional<Expense> findFirstByOrderByDateDesc();
+    Optional<Expense> findFirstByUserIdOrderByDateDesc(Long userId);
+
+    List<Expense> findByUserId(Long userId);
+
+
 
 }

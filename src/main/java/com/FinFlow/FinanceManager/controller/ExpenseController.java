@@ -56,6 +56,11 @@ public class ExpenseController {
         }
     }
 
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<?> getExpensesByUserId(@PathVariable Long userId){
+        return ResponseEntity.ok(expenseService.getExpensesByUserId(userId));
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<?> updateExpense(@PathVariable Long id, @RequestBody ExpenseDTO dto){
         try{

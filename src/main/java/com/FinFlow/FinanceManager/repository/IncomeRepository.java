@@ -14,11 +14,13 @@ import java.time.LocalDate;
 @Repository
 public interface IncomeRepository extends JpaRepository<Income, Long>{
 
-    List<Income> findByDateBetween(LocalDate startDate, LocalDate endDate);
+    List<Income> findByUserIdAndDateBetween(Long userId, LocalDate startDate, LocalDate endDate);
 
-    @Query("SELECT SUM(i.amount) FROM Income i")
-    Double sumAllAmounts();
+    @Query("SELECT SUM(i.amount) FROM Income i WHERE i.user.id = :userId")
+    Double sumAllAmountsByUserId(Long userId);
 
-    Optional<Income> findFirstByOrderByDateDesc();
+    Optional<Income> findFirstByUserIdOrderByDateDesc(Long userId);
+
+    List<Income> findByUserId(Long userId);
 
 }

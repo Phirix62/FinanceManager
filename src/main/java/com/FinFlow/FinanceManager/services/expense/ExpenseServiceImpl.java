@@ -32,6 +32,7 @@ public class ExpenseServiceImpl implements ExpenseService {
         expense.setCategory(expenseDTO.getCategory());
         expense.setDate(expenseDTO.getDate());
         expense.setAmount(expenseDTO.getAmount());
+        expense.setUser(expenseDTO.getUser());
 
         return expenseRepository.save(expense);
     }
@@ -57,6 +58,12 @@ public class ExpenseServiceImpl implements ExpenseService {
         } else {
             throw new EntityNotFoundException("Expense not found with id: " + id);
         }
+    }
+
+    public List<Expense> getExpensesByUserId(Long userId) {
+        return expenseRepository.findByUserId(userId).stream()
+                .sorted(Comparator.comparing(Expense::getDate).reversed())
+                .collect(Collectors.toList());
     }
 
     public void deleteExpense(Long id) {

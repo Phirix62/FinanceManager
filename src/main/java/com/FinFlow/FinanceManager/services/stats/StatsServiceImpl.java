@@ -24,22 +24,22 @@ public class StatsServiceImpl implements StatsService {
 
     private final ExpenseRepository expenseRepository;
 
-    public GraphDTO getChartData(){
+    public GraphDTO getChartData(Long userId){
         LocalDate endDate = LocalDate.now();
         LocalDate startDate = endDate.minusDays(27);
 
         GraphDTO graphDTO = new GraphDTO();
-        graphDTO.setExpenseList(expenseRepository.findByDateBetween(startDate, endDate));
-        graphDTO.setIncomeList(incomeRepository.findByDateBetween(startDate, endDate));
+        graphDTO.setExpenseList(expenseRepository.findByUserIdAndDateBetween(userId, startDate, endDate));
+        graphDTO.setIncomeList(incomeRepository.findByUserIdAndDateBetween(userId, startDate, endDate));
         return graphDTO;
     }
 
-    public StatsDTO getStats(){
-        Double totalIncome = incomeRepository.sumAllAmounts();
-        Double totalExpense = expenseRepository.sumAllAmounts();
+    public StatsDTO getStats(Long userId){
+        Double totalIncome = incomeRepository.sumAllAmountsByUserId(userId);
+        Double totalExpense = expenseRepository.sumAllAmountsByUserId(userId);
 
-        Optional<Income> optionalIncome = incomeRepository.findFirstByOrderByDateDesc();
-        Optional<Expense> optionalExpense = expenseRepository.findFirstByOrderByDateDesc();
+        Optional<Income> optionalIncome = incomeRepository.findFirstByUserIdOrderByDateDesc(userId);
+        Optional<Expense> optionalExpense = expenseRepository.findFirstByUserIdOrderByDateDesc(userId);
 
         StatsDTO statsDTO = new StatsDTO();
         statsDTO.setExpense(totalExpense);

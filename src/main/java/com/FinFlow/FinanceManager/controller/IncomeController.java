@@ -64,6 +64,11 @@ public class IncomeController {
         }
     }
 
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<?> getIncomesByUserId(@PathVariable Long userId) {
+        return ResponseEntity.ok(incomeService.getIncomesByUserId(userId));
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteIncome(@PathVariable Long id) {
         try {

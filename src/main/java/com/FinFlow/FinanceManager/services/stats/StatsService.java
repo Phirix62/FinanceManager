@@ -5,8 +5,8 @@ import com.FinFlow.FinanceManager.dto.StatsDTO;
 
 public interface StatsService {
 
-    GraphDTO getChartData();
+    GraphDTO getChartData(Long userId);
 
-    StatsDTO getStats();
+    StatsDTO getStats(Long userId);
 
 }

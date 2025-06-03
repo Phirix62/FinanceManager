@@ -1,6 +1,8 @@
 package com.FinFlow.FinanceManager.dto;
 
 import java.time.LocalDate;
+import com.FinFlow.FinanceManager.entity.User;
+
 
 import lombok.Data;
 
@@ -13,5 +15,6 @@ public class ExpenseDTO {
     private String category;
     private LocalDate date;
     private Integer amount;
+    private User user;
 
 }

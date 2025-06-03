@@ -31,6 +31,7 @@ public class IncomeServiceImpl implements IncomeService{
         income.setAmount(incomeDTO.getAmount());
         income.setCategory(incomeDTO.getCategory());
         income.setDescription(incomeDTO.getDescription());
+        income.setUser(incomeDTO.getUser());
         return incomeRepository.save(income);
     }
 
@@ -47,6 +48,13 @@ public class IncomeServiceImpl implements IncomeService{
     public List<IncomeDTO> getAllIncomes(){
         return incomeRepository.findAll().stream().sorted(Comparator.comparing(Income::getDate).reversed())
                 .map(Income::getIncomeDTO).collect(Collectors.toList());
+    }
+
+    public List<IncomeDTO> getIncomesByUserId(Long userId) {
+        return incomeRepository.findByUserId(userId).stream()
+                .sorted(Comparator.comparing(Income::getDate).reversed())
+                .map(Income::getIncomeDTO)
+                .collect(Collectors.toList());
     }
 
     public IncomeDTO getIncomeById(Long id) {
