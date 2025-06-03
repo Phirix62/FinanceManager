@@ -102,6 +102,17 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>3.6.3</version>
+				<configuration>
+					<source>17</source> <!-- or 21 depending on your Java version -->
+					<encoding>UTF-8</encoding>
+					<doclint>none</doclint> <!-- disables doclint warnings -->
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
