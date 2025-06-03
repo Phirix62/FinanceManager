@@ -45,7 +45,9 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 
 4. Run with Maven or in IDE
+```bash
 mvn spring-boot:run
+```
 
 ## 📚 Documentation
 JavaDoc is available in /docs or see GitHub Page : [Backend doc](https://phirix62.github.io/FinanceManager/)
