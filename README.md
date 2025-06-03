@@ -37,12 +37,14 @@ cd FinanceManager
 ```
 
 2. Configure **application.properties**
+```text
 spring.datasource.url=jdbc:mysql://localhost:3306/finflow
 spring.datasource.username=root
 spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update
+```
 
-3. Run with Maven or in IDE
+4. Run with Maven or in IDE
 mvn spring-boot:run
 
 ## 📚 Documentation
