@@ -38,6 +38,7 @@ public class Income {
         incomeDTO.setDate(this.date);
         incomeDTO.setCategory(this.category);
         incomeDTO.setDescription(this.description);
+        incomeDTO.setUser(this.user);
         return incomeDTO;
     }
 
