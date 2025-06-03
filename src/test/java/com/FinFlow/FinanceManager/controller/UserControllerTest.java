@@ -28,15 +28,43 @@ class UserControllerTest {
     }
 
     @Test
-    void registerUser_ShouldCallServiceAndReturnSuccessMessage() {
+    void registerUser_ShouldReturnOkWithUser_WhenRegistrationIsSuccessful() {
         UserDTO userDTO = new UserDTO();
-        // No need for doNothing() if registerUser is void; Mockito mocks void methods by default
+        userDTO.setUsername("testuser");
+        User user = new User();
+        when(userService.registerUser(userDTO)).thenReturn(user);
 
         ResponseEntity<?> result = userController.registerUser(userDTO);
 
         verify(userService, times(1)).registerUser(userDTO);
         assertEquals(HttpStatus.OK, result.getStatusCode());
-        assertEquals("User registered successfully", result.getBody());
+        assertEquals(user, result.getBody());
+    }
+
+    @Test
+    void registerUser_ShouldReturnBadRequest_WhenIllegalArgumentException() {
+        UserDTO userDTO = new UserDTO();
+        userDTO.setUsername("baduser");
+        when(userService.registerUser(userDTO)).thenThrow(new IllegalArgumentException("Invalid data"));
+
+        ResponseEntity<?> result = userController.registerUser(userDTO);
+
+        verify(userService, times(1)).registerUser(userDTO);
+        assertEquals(HttpStatus.BAD_REQUEST, result.getStatusCode());
+        assertEquals("Invalid data", result.getBody());
+    }
+
+    @Test
+    void registerUser_ShouldReturnInternalServerError_WhenOtherException() {
+        UserDTO userDTO = new UserDTO();
+        userDTO.setUsername("erroruser");
+        when(userService.registerUser(userDTO)).thenThrow(new RuntimeException("Unexpected error"));
+
+        ResponseEntity<?> result = userController.registerUser(userDTO);
+
+        verify(userService, times(1)).registerUser(userDTO);
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, result.getStatusCode());
+        assertEquals("Registration failed", result.getBody());
     }
 
     @Test
