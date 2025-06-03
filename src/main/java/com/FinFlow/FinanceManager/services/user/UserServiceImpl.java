@@ -30,6 +30,11 @@ public class UserServiceImpl implements UserService {
      */
     public User registerUser(UserDTO userDTO) {
         logger.info("Registering user with username: {}", userDTO.getUsername());
+        // Check if username already exists
+        if (userRepository.findByUsername(userDTO.getUsername()).isPresent()) {
+            logger.warn("Username already exists: {}", userDTO.getUsername());
+            throw new RuntimeException("Username already exists");
+        }
         User user = new User();
         user.setUsername(userDTO.getUsername());
         user.setEmail(userDTO.getEmail());

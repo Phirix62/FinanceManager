@@ -32,10 +32,11 @@ class UserControllerTest {
         UserDTO userDTO = new UserDTO();
         // No need for doNothing() if registerUser is void; Mockito mocks void methods by default
 
-        String result = userController.registerUser(userDTO);
+        ResponseEntity<?> result = userController.registerUser(userDTO);
 
         verify(userService, times(1)).registerUser(userDTO);
-        assertEquals("User registered successfully!", result);
+        assertEquals(HttpStatus.OK, result.getStatusCode());
+        assertEquals("User registered successfully", result.getBody());
     }
 
     @Test

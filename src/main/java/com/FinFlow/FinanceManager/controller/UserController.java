@@ -34,11 +34,19 @@ public class UserController {
      * @return a success message if registration is successful
      */
     @PostMapping("/register")
-    public String registerUser(@RequestBody UserDTO userDTO) {
+    public ResponseEntity<?> registerUser(@RequestBody UserDTO userDTO) {
         logger.info("Registering user with username: {}", userDTO.getUsername());
-        userService.registerUser(userDTO);
-        logger.info("User registered successfully: {}", userDTO.getUsername());
-        return "User registered successfully!";
+        try {
+            User user = userService.registerUser(userDTO);
+            logger.info("User registered successfully: {}", userDTO.getUsername());
+            return ResponseEntity.ok(user);
+        } catch (IllegalArgumentException e) {
+            logger.warn("Registration failed for user: {} - {}", userDTO.getUsername(), e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        } catch (Exception e) {
+            logger.error("Unexpected error during registration for user: {}", userDTO.getUsername(), e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Registration failed");
+        }
     }
 
     /**
