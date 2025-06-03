@@ -1,0 +1,10 @@
+com.FinFlow.FinanceManager
+com.FinFlow.FinanceManager.config
+com.FinFlow.FinanceManager.controller
+com.FinFlow.FinanceManager.dto
+com.FinFlow.FinanceManager.entity
+com.FinFlow.FinanceManager.repository
+com.FinFlow.FinanceManager.services.expense
+com.FinFlow.FinanceManager.services.income
+com.FinFlow.FinanceManager.services.stats
+com.FinFlow.FinanceManager.services.user

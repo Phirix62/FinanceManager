@@ -1,0 +1,122 @@
+@options
+@packages
+-classpath
+'C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.4.4/spring-boot-starter-actuator-3.4.4.jar;C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot-starter/3.4.4/spring-boot-starter-3.4.4.jar;C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot/3.4.4/spring-boot-3.4.4.jar;C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.4.4/spring-boot-autoconfigure-3.4.4.jar;C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.4.4/spring-boot-starter-logging-3.4.4.jar;C:/Users/Natha/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar;C:/Users/Natha/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar;C:/Users/Natha/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar;C:/Users/Natha/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar;C:/Users/Natha/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar;C:/Users/Natha/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar;C:/Users/Natha/.m2/repository/org/yaml/snakeyaml/2.3/snakeyaml-2.3.jar;C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.4.4/spring-boot-actuator-autoconfigure-3.4.4.jar;C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot-actuator/3.4.4/spring-boot-actuator-3.4.4.jar;C:/Users/Natha/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.3/jackson-databind-2.18.3.jar;C:/Users/Natha/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.3/jackson-annotations-2.18.3.jar;C:/Users/Natha/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.3/jackson-core-2.18.3.jar;C:/Users/Natha/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.18.3/jackson-datatype-jsr310-2.18.3.jar;C:/Users/Natha/.m2/repository/io/micrometer/micrometer-observation/1.14.5/micrometer-observation-1.14.5.jar;C:/Users/Natha/.m2/repository/io/micrometer/micrometer-commons/1.14.5/micrometer-commons-1.14.5.jar;C:/Users/Natha/.m2/repository/io/micrometer/micrometer-jakarta9/1.14.5/micrometer-jakarta9-1.14.5.jar;C:/Users/Natha/.m2/repository/io/micrometer/micrometer-core/1.14.5/micrometer-core-1.14.5.jar;C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.4.4/spring-boot-starter-data-jpa-3.4.4.jar;C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.4.4/spring-boot-starter-jdbc-3.4.4.jar;C:/Users/Natha/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-jdbc/6.2.5/spring-jdbc-6.2.5.jar;C:/Users/Natha/.m2/repository/org/hibernate/orm/hibernate-core/6.6.11.Final/hibernate-core-6.6.11.Final.jar;C:/Users/Natha/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar;C:/Users/Natha/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar;C:/Users/Natha/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar;C:/Users/Natha/.m2/repository/org/springframework/data/spring-data-jpa/3.4.4/spring-data-jpa-3.4.4.jar;C:/Users/Natha/.m2/repository/org/springframework/data/spring-data-commons/3.4.4/spring-data-commons-3.4.4.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-orm/6.2.5/spring-orm-6.2.5.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-context/6.2.5/spring-context-6.2.5.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-aop/6.2.5/spring-aop-6.2.5.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-tx/6.2.5/spring-tx-6.2.5.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-beans/6.2.5/spring-beans-6.2.5.jar;C:/Users/Natha/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-aspects/6.2.5/spring-aspects-6.2.5.jar;C:/Users/Natha/.m2/repository/org/aspectj/aspectjweaver/1.9.23/aspectjweaver-1.9.23.jar;C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.4.4/spring-boot-starter-web-3.4.4.jar;C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.4.4/spring-boot-starter-json-3.4.4.jar;C:/Users/Natha/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.18.3/jackson-datatype-jdk8-2.18.3.jar;C:/Users/Natha/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.18.3/jackson-module-parameter-names-2.18.3.jar;C:/Users/Natha/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.4.4/spring-boot-starter-tomcat-3.4.4.jar;C:/Users/Natha/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.39/tomcat-embed-core-10.1.39.jar;C:/Users/Natha/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.39/tomcat-embed-el-10.1.39.jar;C:/Users/Natha/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.39/tomcat-embed-websocket-10.1.39.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-web/6.2.5/spring-web-6.2.5.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-webmvc/6.2.5/spring-webmvc-6.2.5.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-expression/6.2.5/spring-expression-6.2.5.jar;C:/Users/Natha/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar;C:/Users/Natha/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar;C:/Users/Natha/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-core/6.2.5/spring-core-6.2.5.jar;C:/Users/Natha/.m2/repository/org/springframework/spring-jcl/6.2.5/spring-jcl-6.2.5.jar;C:/Users/Natha/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar;C:/Users/Natha/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.2.0/springdoc-openapi-starter-webmvc-api-2.2.0.jar;C:/Users/Natha/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar;C:/Users/Natha/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.15/swagger-core-jakarta-2.2.15.jar;C:/Users/Natha/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar;C:/Users/Natha/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.15/swagger-annotations-jakarta-2.2.15.jar;C:/Users/Natha/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.15/swagger-models-jakarta-2.2.15.jar;C:/Users/Natha/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar;C:/Users/Natha/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.18.3/jackson-dataformat-yaml-2.18.3.jar;C:/Users/Natha/.m2/repository/org/webjars/swagger-ui/5.2.0/swagger-ui-5.2.0.jar;C:/Users/Natha/.m2/repository/org/springframework/security/spring-security-crypto/6.4.4/spring-security-crypto-6.4.4.jar'
+-encoding
+'UTF-8'
+-protected
+--release
+17
+-sourcepath
+'C:/UTT/Cluj/courses/software design/Project/FinanceManager/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/UTT/Cluj/courses/software design/Project/FinanceManager/target/site/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'FinanceManager 0.0.1-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'FinanceManager 0.0.1-SNAPSHOT API'
+com.FinFlow.FinanceManager.config
+com.FinFlow.FinanceManager.controller
+com.FinFlow.FinanceManager.dto
+com.FinFlow.FinanceManager.entity
+com.FinFlow.FinanceManager
+com.FinFlow.FinanceManager.repository
+com.FinFlow.FinanceManager.services.expense
+com.FinFlow.FinanceManager.services.income
+com.FinFlow.FinanceManager.services.stats
+com.FinFlow.FinanceManager.services.user
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.4.4\spring-boot-starter-actuator-3.4.4.jar = 1743433741071
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot-starter\3.4.4\spring-boot-starter-3.4.4.jar = 1742825781566
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot\3.4.4\spring-boot-3.4.4.jar = 1742825830067
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.4.4\spring-boot-autoconfigure-3.4.4.jar = 1742825830446
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.4.4\spring-boot-starter-logging-3.4.4.jar = 1742825781545
+C:\Users\Natha\.m2\repository\ch\qos\logback\logback-classic\1.5.18\logback-classic-1.5.18.jar = 1742825791399
+C:\Users\Natha\.m2\repository\ch\qos\logback\logback-core\1.5.18\logback-core-1.5.18.jar = 1742825802000
+C:\Users\Natha\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar = 1742825782067
+C:\Users\Natha\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar = 1742825785127
+C:\Users\Natha\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar = 1742825785280
+C:\Users\Natha\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar = 1742825786068
+C:\Users\Natha\.m2\repository\org\yaml\snakeyaml\2.3\snakeyaml-2.3.jar = 1742825797089
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.4.4\spring-boot-actuator-autoconfigure-3.4.4.jar = 1743433741808
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot-actuator\3.4.4\spring-boot-actuator-3.4.4.jar = 1743433741968
+C:\Users\Natha\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.3\jackson-databind-2.18.3.jar = 1742825870783
+C:\Users\Natha\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.3\jackson-annotations-2.18.3.jar = 1742825847262
+C:\Users\Natha\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.3\jackson-core-2.18.3.jar = 1742825851622
+C:\Users\Natha\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.18.3\jackson-datatype-jsr310-2.18.3.jar = 1742825871279
+C:\Users\Natha\.m2\repository\io\micrometer\micrometer-observation\1.14.5\micrometer-observation-1.14.5.jar = 1742825874877
+C:\Users\Natha\.m2\repository\io\micrometer\micrometer-commons\1.14.5\micrometer-commons-1.14.5.jar = 1742825876105
+C:\Users\Natha\.m2\repository\io\micrometer\micrometer-jakarta9\1.14.5\micrometer-jakarta9-1.14.5.jar = 1743433742178
+C:\Users\Natha\.m2\repository\io\micrometer\micrometer-core\1.14.5\micrometer-core-1.14.5.jar = 1743433741796
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.4.4\spring-boot-starter-data-jpa-3.4.4.jar = 1742825781437
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.4.4\spring-boot-starter-jdbc-3.4.4.jar = 1742825792293
+C:\Users\Natha\.m2\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar = 1742825796796
+C:\Users\Natha\.m2\repository\org\springframework\spring-jdbc\6.2.5\spring-jdbc-6.2.5.jar = 1742825824490
+C:\Users\Natha\.m2\repository\org\hibernate\orm\hibernate-core\6.6.11.Final\hibernate-core-6.6.11.Final.jar = 1742825924199
+C:\Users\Natha\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar = 1741768081222
+C:\Users\Natha\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar = 1742825802936
+C:\Users\Natha\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar = 1742825832995
+C:\Users\Natha\.m2\repository\org\springframework\data\spring-data-jpa\3.4.4\spring-data-jpa-3.4.4.jar = 1742825842696
+C:\Users\Natha\.m2\repository\org\springframework\data\spring-data-commons\3.4.4\spring-data-commons-3.4.4.jar = 1742825838051
+C:\Users\Natha\.m2\repository\org\springframework\spring-orm\6.2.5\spring-orm-6.2.5.jar = 1742825834574
+C:\Users\Natha\.m2\repository\org\springframework\spring-context\6.2.5\spring-context-6.2.5.jar = 1742825846078
+C:\Users\Natha\.m2\repository\org\springframework\spring-aop\6.2.5\spring-aop-6.2.5.jar = 1742825842735
+C:\Users\Natha\.m2\repository\org\springframework\spring-tx\6.2.5\spring-tx-6.2.5.jar = 1742825843886
+C:\Users\Natha\.m2\repository\org\springframework\spring-beans\6.2.5\spring-beans-6.2.5.jar = 1742825846744
+C:\Users\Natha\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar = 1742825844139
+C:\Users\Natha\.m2\repository\org\springframework\spring-aspects\6.2.5\spring-aspects-6.2.5.jar = 1742825845136
+C:\Users\Natha\.m2\repository\org\aspectj\aspectjweaver\1.9.23\aspectjweaver-1.9.23.jar = 1742825872374
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.4.4\spring-boot-starter-web-3.4.4.jar = 1742825846198
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.4.4\spring-boot-starter-json-3.4.4.jar = 1742825846336
+C:\Users\Natha\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.18.3\jackson-datatype-jdk8-2.18.3.jar = 1742825853935
+C:\Users\Natha\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.18.3\jackson-module-parameter-names-2.18.3.jar = 1742825871351
+C:\Users\Natha\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.4.4\spring-boot-starter-tomcat-3.4.4.jar = 1742825871653
+C:\Users\Natha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.39\tomcat-embed-core-10.1.39.jar = 1742825885397
+C:\Users\Natha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.39\tomcat-embed-el-10.1.39.jar = 1742825872995
+C:\Users\Natha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.39\tomcat-embed-websocket-10.1.39.jar = 1742825874278
+C:\Users\Natha\.m2\repository\org\springframework\spring-web\6.2.5\spring-web-6.2.5.jar = 1742825894219
+C:\Users\Natha\.m2\repository\org\springframework\spring-webmvc\6.2.5\spring-webmvc-6.2.5.jar = 1742825881266
+C:\Users\Natha\.m2\repository\org\springframework\spring-expression\6.2.5\spring-expression-6.2.5.jar = 1742825883790
+C:\Users\Natha\.m2\repository\org\projectlombok\lombok\1.18.36\lombok-1.18.36.jar = 1742825899301
+C:\Users\Natha\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar = 1742825896119
+C:\Users\Natha\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar = 1742825896882
+C:\Users\Natha\.m2\repository\org\springframework\spring-core\6.2.5\spring-core-6.2.5.jar = 1742825912095
+C:\Users\Natha\.m2\repository\org\springframework\spring-jcl\6.2.5\spring-jcl-6.2.5.jar = 1742825905699
+C:\Users\Natha\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.2.0\springdoc-openapi-starter-webmvc-ui-2.2.0.jar = 1743531178151
+C:\Users\Natha\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.2.0\springdoc-openapi-starter-webmvc-api-2.2.0.jar = 1743531178367
+C:\Users\Natha\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.2.0\springdoc-openapi-starter-common-2.2.0.jar = 1743531181568
+C:\Users\Natha\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.15\swagger-core-jakarta-2.2.15.jar = 1743531179960
+C:\Users\Natha\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar = 1743531187567
+C:\Users\Natha\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.15\swagger-annotations-jakarta-2.2.15.jar = 1743531179458
+C:\Users\Natha\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.15\swagger-models-jakarta-2.2.15.jar = 1743531179311
+C:\Users\Natha\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar = 1743531179917
+C:\Users\Natha\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.18.3\jackson-dataformat-yaml-2.18.3.jar = 1743531180132
+C:\Users\Natha\.m2\repository\org\webjars\swagger-ui\5.2.0\swagger-ui-5.2.0.jar = 1743531224066
+C:\Users\Natha\.m2\repository\org\springframework\security\spring-security-crypto\6.4.4\spring-security-crypto-6.4.4.jar = 1744180112512
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\src\main\java = 1742825634161
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\allclasses-index.html = 1748980697453
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\allpackages-index.html = 1748980697458
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\element-list = 1748980696966
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\help-doc.html = 1748980697496
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\index-all.html = 1748980697486
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\index.html = 1748980697418
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\jquery-ui.overrides.css = 1748980697524
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\member-search-index.js = 1748980697464
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\module-search-index.js = 1748980697460
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\overview-summary.html = 1748980697490
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\overview-tree.html = 1748980697409
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\package-search-index.js = 1748980697462
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\script.js = 1748980697500
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\search.js = 1748980697509
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\stylesheet.css = 1748980697499
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\tag-search-index.js = 1748980697466
+C:\UTT\Cluj\courses\software design\Project\FinanceManager\target\site\apidocs\type-search-index.js = 1748980697463
